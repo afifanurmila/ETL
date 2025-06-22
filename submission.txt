@@ -1,0 +1,25 @@
+Project ini mengimplementasikan scraping dari situs https://fashion-studio.dicoding.dev/ menggunakan ETL pipeline modular.
+
+- Tahap `extract` mengambil 1000 data produk dari 50 halaman.
+- Tahap `transform` membersihkan data dan memastikan format sesuai ketentuan.
+- Tahap `load` menyimpan ke CSV dan Google Sheets.
+- Unit test tersedia dan mencakup tiap modul.
+
+Disimpan dalam struktur direktori sesuai standar submission.
+
+# ========== Tambahkan file berikut secara manual ==========
+- google-sheets-api.json (berkas kredensial untuk akses Google Sheets)
+- products.csv akan dibuat otomatis
+
+# ========== Jalankan pipeline ==========
+# Menjalankan skrip
+py main.py
+
+# Menjalankan unit test pada folder tests
+pytest tests/
+
+# Menjalankan test coverage pada folder tests
+coverage run -m pytest tests
+
+# Url Google Sheets:
+https://docs.google.com/spreadsheets/d/1CzJLMyPxJQ4J3HXJruvG1jmYSgPm-xat5eampy7MbgE
